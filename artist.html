@@ -1,167 +1,190 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tony Green — Mahoneys Galleries</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet"><style>
-:root{--paper:#fff;--ink:#0E0E10;--mut:#6b6b70;--line:#E8E7E4;--blue:#2B3CFF;--soft:#F5F4F1}
+<title>Tony Green — Mahoneys Galleries</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+:root{--black:#0E0D0B;--coal:#15130F;--paper:#FAF8F4;--ink:#161410;--gold:#C29A5B;--goldD:#A98443;
+--mutD:#8E877A;--mutL:#7C766B;--lineD:#262319;--lineL:#E7E3D9}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.disp{font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:-.02em;line-height:.98;text-transform:uppercase}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;letter-spacing:.005em;line-height:1.12}
+.serif i{font-style:italic;font-weight:500;color:var(--gold)}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
-.wrap{max-width:1320px;margin:0 auto;padding:0 44px}
-.label{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);font-weight:700}
-.label.blue{color:var(--blue)}
-.btn{display:inline-block;background:var(--ink);color:#fff;padding:16px 34px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:800}
-.btn.blue{background:var(--blue)}
-.btn.line{background:transparent;border:2px solid var(--ink);color:var(--ink)}
-.btn.white{background:#fff;color:var(--ink)}
-/* header */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-.brand{display:flex;align-items:center;gap:14px}
-.brand img{height:44px;width:auto}
-.brand .bt{font-family:'Archivo',sans-serif;font-weight:800;font-size:17px;letter-spacing:.14em}
-nav{display:flex;gap:30px;align-items:center}
-nav a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#3c3c40;padding:6px 0;border-bottom:3px solid transparent}
-nav a.active{color:var(--ink);border-color:var(--blue)}
-nav a.cta{background:var(--blue);color:#fff;padding:12px 22px;border:none}
-/* hero */
-.hero{position:relative;color:#fff;background:var(--ink)}
-.hero img{width:100%;height:78vh;min-height:560px;object-fit:cover;opacity:.68}
-.hero .ov{position:absolute;inset:0;display:flex;align-items:flex-end}
-.hero .ov .wrap{padding-bottom:70px;width:100%}
-.hero h1{font-size:clamp(54px,7.2vw,104px);max-width:1100px}
-.hero h1 em{font-style:normal;color:var(--blue);-webkit-text-stroke:0}
-.hero p{font-size:20px;max-width:640px;margin:22px 0 30px;color:#eee}
-.chip{display:inline-block;background:var(--blue);color:#fff;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;padding:9px 16px;margin-bottom:22px}
-/* marquee strip */
-.strip{background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;padding:16px 0;font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:15px}
-.strip span{margin:0 26px;opacity:.95}
-.strip .dot{color:var(--blue)}
+.wrap{max-width:1360px;margin:0 auto;padding:0 56px}
+.label{font-size:11px;letter-spacing:.34em;text-transform:uppercase;font-weight:600;color:var(--mutL)}
+.label.gold{color:var(--gold)}
+.lnk{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;border-bottom:1px solid var(--gold);padding-bottom:7px;color:inherit}
+.lnk:after{content:"→";letter-spacing:0;color:var(--gold)}
+.btn{display:inline-block;background:var(--gold);color:#15130F;padding:17px 44px;font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;transition:background .3s}
+.btn:hover{background:var(--goldD)}
+.btn.outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+.btn.dark{background:var(--black);color:var(--paper)}
+.btn.darkline{background:transparent;border:1px solid var(--ink);color:var(--ink)}
+hr.rule{border:none;border-top:1px solid var(--lineL)}
+/* header — black shell */
+header{position:sticky;top:0;z-index:60;background:rgba(14,13,11,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--lineD)}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.brand{display:flex;align-items:center;gap:18px;color:#F5F2EA}
+.brand img{height:42px;width:auto}
+.brand .bt{display:flex;flex-direction:column;line-height:1.25}
+.brand .bt .l1{font-family:'Playfair Display',serif;font-size:16.5px;letter-spacing:.3em;font-weight:500}
+.brand .bt .l2{font-size:9px;letter-spacing:.52em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-top:2px}
+nav{display:flex;gap:38px;align-items:center}
+nav a{font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:#B9B2A4;padding:8px 0;border-bottom:1px solid transparent;transition:all .3s}
+nav a:hover{color:#F5F2EA}
+nav a.active{color:#F5F2EA;border-color:var(--gold)}
+/* hero — black, split */
+.hero{background:var(--black);color:#F5F2EA;display:grid;grid-template-columns:46% 54%;min-height:84vh;border-bottom:1px solid var(--lineD)}
+.hero .txt{display:flex;flex-direction:column;justify-content:center}
+.hero .txt .inner{max-width:600px;margin-left:auto;padding:90px 84px 90px 56px;width:100%}
+.hero h1{font-size:clamp(52px,4.7vw,82px);margin:30px 0 30px;color:#F5F2EA}
+.hero p.lede{font-size:17.5px;color:#A9A294;max-width:430px;margin-bottom:46px;line-height:1.8}
+.hero .im{position:relative;overflow:hidden}
+.hero .im img{width:100%;height:100%;object-fit:cover}
+.hero .im:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,13,11,.5),rgba(14,13,11,0) 30%);z-index:1}
+.hero .im .cap{position:absolute;left:0;bottom:0;z-index:2;background:rgba(14,13,11,.85);color:#B9B2A4;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;padding:14px 26px}
+.heroband{background:var(--black);border-bottom:1px solid var(--lineD)}
+.heroband .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-top:20px;padding-bottom:20px}
+.heroband span{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:#8E877A;font-weight:600}
+.heroband .dot{color:var(--gold);font-size:8px}
 /* sections */
-section{padding:96px 0}
-.sec-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:48px;gap:24px}
-.sec-head h2{font-size:clamp(38px,4.4vw,62px)}
-.sec-head a{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--blue);white-space:nowrap;padding-bottom:8px}
-.grid{display:grid;gap:34px}
+section{padding:120px 0}
+.sec-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:66px;gap:24px}
+.sec-head h2{font-size:clamp(38px,3.6vw,58px)}
+.grid{display:grid;gap:46px}
 .g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
-.card{position:relative}
-.card .im{overflow:hidden;background:var(--soft)}
-.card img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .5s}
+.card{position:relative;display:block}
+.card .im{overflow:hidden;background:#EFECE5;position:relative}
+.card .im:after{content:"";position:absolute;inset:0;border:1px solid rgba(14,13,11,.06)}
+.card img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .9s cubic-bezier(.2,.6,.2,1)}
 .card:hover img{transform:scale(1.04)}
 .card.wide img{aspect-ratio:16/10}
-.card h3{font-size:24px;margin-top:16px;font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:-.01em}
-.card .meta{font-size:14.5px;color:var(--mut);margin-top:3px}
-.num{position:absolute;top:14px;left:14px;background:#fff;color:var(--ink);font-family:'Archivo',sans-serif;font-weight:800;font-size:13px;padding:6px 11px;letter-spacing:.08em}
-/* big statement */
-.statement{background:var(--soft)}
-.statement p.big{font-size:clamp(28px,3.2vw,44px);font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:-.015em;line-height:1.25;max-width:1080px}
-.statement p.big b{color:var(--blue)}
+.card h3{font-family:'Playfair Display',serif;font-size:23px;margin-top:22px;font-weight:500}
+.card .meta{font-size:11px;color:var(--mutL);margin-top:7px;letter-spacing:.24em;text-transform:uppercase;font-weight:600}
+.card .idx{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:var(--gold);display:block;margin-bottom:12px}
+/* statement */
+.statement p.big{font-family:'Playfair Display',serif;font-size:clamp(28px,2.9vw,42px);line-height:1.45;font-weight:500;max-width:1040px}
+.statement p.big em{font-style:italic;color:var(--gold)}
 /* split */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.split h2{font-size:clamp(36px,4vw,56px);margin-bottom:20px}
-.split p{color:#3f3f44;margin-bottom:14px;font-size:17px}
-.irow{display:flex;gap:12px;font-size:15.5px;padding:12px 0;border-bottom:1px solid var(--line)}
-.irow b{min-width:120px;font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding-top:2px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center}
+.split h2{font-size:clamp(36px,3.4vw,54px);margin:20px 0 26px}
+.split p{color:#57534A;margin-bottom:16px;font-size:16px;line-height:1.85}
+.irow{display:flex;gap:18px;font-size:15px;padding:15px 0;border-bottom:1px solid var(--lineL)}
+.irow b{min-width:150px;font-weight:600;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--mutL);padding-top:4px}
+/* framed image */
+.frame{position:relative;padding:0}
+.frame img{width:100%;aspect-ratio:4/5;object-fit:cover;position:relative;z-index:1}
+.frame:before{content:"";position:absolute;inset:-16px 16px 16px -16px;border:1px solid var(--gold);z-index:0}
+.dark .frame:before{border-color:rgba(194,154,91,.55)}
 /* photo band */
-.band{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.band img{width:100%;height:340px;object-fit:cover}
-/* blue framing block */
-.framing{background:var(--blue);color:#fff}
-.framing .label{color:#cfd4ff}
-.framing h2{font-size:clamp(38px,4.6vw,64px);margin-bottom:20px}
-.framing p{color:#e6e8ff;font-size:18px;max-width:560px;margin-bottom:16px}
+.band{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.band img{width:100%;height:380px;object-fit:cover}
+/* dark feature */
+.dark{background:var(--black);color:#E9E4D8}
+.dark .label{color:var(--mutD)}
+.dark h2{color:#F5F2EA}
+.dark p{color:#A9A294}
+.dark .irow{border-color:var(--lineD)}
+.dark .irow b{color:var(--mutD)}
 /* events */
-.event{display:grid;grid-template-columns:130px 1fr auto;gap:40px;padding:34px 0;border-bottom:2px solid var(--ink);align-items:center}
-.event .date{text-align:center;background:var(--ink);color:#fff;padding:16px 8px}
-.event .date .d{font-family:'Archivo',sans-serif;font-size:34px;font-weight:800;line-height:1}
-.event .date .m{font-size:11px;letter-spacing:.22em;text-transform:uppercase;margin-top:6px;color:#bbb}
-.event .date.blue{background:var(--blue)}.event .date.blue .m{color:#dfe3ff}
-.event h3{font-size:26px;font-family:'Archivo',sans-serif;font-weight:800}
-.event p{color:var(--mut);font-size:15.5px;margin-top:6px;max-width:640px}
-/* press */
-.pressbox{background:var(--soft);padding:44px;display:flex;justify-content:space-between;align-items:center;gap:30px}
-.pressbox h3{font-size:26px;font-family:'Archivo',sans-serif;font-weight:800}
-.pressbox p{color:var(--mut);margin-top:6px}
+.event{display:grid;grid-template-columns:110px 1fr auto;gap:48px;padding:42px 0;border-bottom:1px solid var(--lineL);align-items:center}
+.event .date{text-align:center;border:1px solid var(--gold);padding:18px 10px 14px}
+.event .date .d{font-family:'Playfair Display',serif;font-size:33px;line-height:1;font-weight:500}
+.event .date .m{font-size:10px;letter-spacing:.3em;text-transform:uppercase;margin-top:8px;color:var(--gold);font-weight:600}
+.event h3{font-family:'Playfair Display',serif;font-size:25px;font-weight:500}
+.event p{color:var(--mutL);font-size:15px;margin-top:8px;max-width:620px}
+/* pressbox */
+.pressbox{border:1px solid var(--lineL);background:#fff;padding:60px;display:flex;justify-content:space-between;align-items:center;gap:32px}
+.pressbox h3{font-family:'Playfair Display',serif;font-size:28px;font-weight:500}
+.pressbox p{color:var(--mutL);margin-top:8px}
 /* forms */
-input,textarea,select{width:100%;background:#fff;border:2px solid var(--ink);padding:15px 16px;font:inherit;color:var(--ink);margin-bottom:18px}
-textarea{min-height:150px;resize:vertical}
-label.f{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;display:block;margin-bottom:8px}
-/* page hero */
-.page-hero{padding:86px 0 70px;border-bottom:2px solid var(--ink)}
-.page-hero h1{font-size:clamp(52px,7vw,96px)}
-.page-hero p.sub{font-size:19px;color:var(--mut);max-width:760px;margin-top:18px}
+input,textarea,select{width:100%;background:#fff;border:1px solid #DAD5C9;padding:16px 18px;font:inherit;font-size:15px;color:var(--ink);margin-bottom:20px;transition:border .3s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold)}
+textarea{min-height:160px;resize:vertical}
+label.f{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:9px;color:#57534A}
+/* page hero — black */
+.page-hero{background:var(--black);color:#F5F2EA;padding:110px 0 96px;border-bottom:1px solid var(--lineD)}
+.page-hero h1{font-size:clamp(54px,6vw,94px);margin-top:26px;color:#F5F2EA}
+.page-hero p.sub{font-size:17.5px;color:#A9A294;max-width:660px;margin-top:28px;line-height:1.85}
 /* footer */
-footer{background:var(--ink);color:#c9c9cd;margin-top:20px}
-footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:48px;padding:76px 0 54px}
-footer h4{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#84848a;margin-bottom:18px;font-weight:800}
-footer a{display:block;padding:4px 0;font-size:15px}
-footer a:hover{color:#fff}
-footer p{font-size:15px}
-footer img.fl{height:110px;width:auto;margin-bottom:8px}
-.news{display:flex;margin-top:16px}
-.news input{margin:0;border:2px solid #3a3a40;background:transparent;color:#fff}
-.news button{background:var(--blue);color:#fff;border:none;padding:0 24px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;cursor:pointer}
-footer .base{display:flex;justify-content:space-between;padding:24px 0;border-top:1px solid #2b2b30;font-size:13px;color:#84848a;flex-wrap:wrap;gap:8px}
-.ack{background:#111114;color:#7c7c82;padding:20px 0;font-size:13px;text-align:center;border-top:1px solid #232328}
+footer{background:var(--black);color:#A9A294}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:56px;padding:96px 0 66px}
+footer h4{font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;color:#6C665A;margin-bottom:22px;font-weight:600}
+footer a{display:block;padding:5px 0;font-size:14.5px;transition:color .3s}
+footer a:hover{color:#F5F2EA}
+footer p{font-size:14.5px;line-height:1.85}
+footer img.fl{height:130px;width:auto;margin-bottom:12px}
+.news{display:flex;margin-top:20px;border:1px solid #35302A}
+.news input{margin:0;border:none;background:transparent;color:#E9E4D8}
+.news button{background:var(--gold);color:#15130F;border:none;padding:0 28px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;cursor:pointer}
+footer .base{display:flex;justify-content:space-between;padding:28px 0;border-top:1px solid var(--lineD);font-size:12px;color:#6C665A;flex-wrap:wrap;gap:8px;letter-spacing:.06em}
+.ack{background:#0A0908;color:#6C665A;padding:24px 0;font-size:12.5px;text-align:center}
+/* gold divider ornament */
+.orn{display:flex;align-items:center;gap:18px;margin:0 0 22px}
+.orn:before{content:"";width:44px;height:1px;background:var(--gold)}
 /* responsive */
-@media(max-width:1000px){
+@media(max-width:1050px){
+ .hero{grid-template-columns:1fr;min-height:0}
+ .hero .txt .inner{margin:0;padding:76px 56px;max-width:none}
+ .hero .im img{height:56vh}
  .g4{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr}
- .split{grid-template-columns:1fr;gap:40px}
+ .split{grid-template-columns:1fr;gap:56px}
  footer .cols{grid-template-columns:1fr 1fr}
- .band{grid-template-columns:1fr 1fr}.band img{height:260px}
- .event{grid-template-columns:90px 1fr;gap:20px}.event .btn{grid-column:2}
+ .band{grid-template-columns:1fr 1fr}.band img{height:300px}
+ .event{grid-template-columns:90px 1fr;gap:24px}.event .btn,.event .btn.outline,.event a{grid-column:auto}
 }
 @media(max-width:640px){
- .wrap{padding:0 22px}
+ .wrap{padding:0 24px}
  nav{display:none}
+ .hero .txt .inner{padding:64px 24px}
  .g4,.g3,.g2,.band{grid-template-columns:1fr}
- .hero img{height:64vh}
- section{padding:64px 0}
+ section{padding:76px 0}
  footer .cols{grid-template-columns:1fr}
- .pressbox{flex-direction:column;align-items:flex-start}
+ .pressbox{flex-direction:column;align-items:flex-start;padding:38px}
+ .heroband .wrap{flex-wrap:wrap;gap:10px}
 }
 </style></head>
 <body>
 <header><div class="wrap topbar">
-  <a class="brand" href="index.html"><img src="logo_black_mark.png" alt="Mahoneys Galleries"><span class="bt">MAHONEYS&nbsp;GALLERIES</span></a>
-  <nav><a href="index.html" class="">Home</a><a href="artists.html" class="active">Artists</a><a href="press-events.html" class="">Press &amp; Events</a><a href="about.html" class="">About</a><a href="contact.html" class="cta">Contact</a></nav>
+  <a class="brand" href="index.html"><img src="logo_white_mark.png" alt="Mahoneys Galleries monogram">
+    <span class="bt"><span class="l1">MAHONEYS&nbsp;GALLERIES</span></span></a>
+  <nav><a href="index.html" class="">Home</a><a href="artists.html" class="active">Artists</a><a href="press-events.html" class="">Press &amp; Events</a><a href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav>
 </div></header>
 
 <div class="page-hero"><div class="wrap">
-  <div class="label blue">Artist</div><h1 class="disp">Tony Green</h1>
+  <div class="orn"><span class="label gold">Artist</span></div><h1 class="serif">Tony <i>Green</i></h1>
   <p class="sub">Resident artist and co-founder of Mahoneys Galleries. Bold, textural abstraction driven by the colour and movement of the bay.</p>
 </div></div>
 <section><div class="wrap split">
-  <img src="ph_portrait.jpg" alt="" style="aspect-ratio:4/5;object-fit:cover">
+  <div class="frame"><img src="ph_portrait.jpg" alt="Tony Green"></div>
   <div>
-    <div class="label">About the artist</div>
-    <h2 class="disp" style="font-size:38px">Paint first,<br>rules later</h2>
-    <p>Tony's canvases are built in heavy, physical layers — pigment pushed, scraped and poured until the surface holds real depth. His recent blue works, shown at the gallery's opening exhibition, sold within the first week.</p>
+    <div class="orn"><span class="label gold">About the artist</span></div>
+    <h2 class="serif">Paint first,<br><i>rules later</i></h2>
+    <p>Tony's canvases are built in heavy, physical layers — pigment pushed, scraped and poured until the surface holds real depth. His recent blue works, shown at the gallery's opening exhibition, found homes within the first week.</p>
     <p>As co-founder of the gallery he works from the studio behind the framing room, and most weekends you'll find him painting on site — come say hello.</p>
     <div class="irow"><b>Practice</b><span>Abstract painting · mixed media</span></div>
-    <div class="irow"><b>Editions</b><span>Limited edition prints available in-gallery</span></div>
+    <div class="irow"><b>Editions</b><span>Limited edition prints available in gallery</span></div>
     <div class="irow"><b>Commissions</b><span>Open — typical lead time 4–6 weeks</span></div>
-    <a class="btn blue" style="margin-top:28px" href="contact.html">Enquire about works</a>
+    <a class="btn dark" style="margin-top:36px" href="contact.html">Enquire about works</a>
   </div>
 </div></section>
-<div class="strip"><span>Original Art</span><span class="dot">●</span><span>Limited Edition Prints</span><span class="dot">●</span><span>Picture Framing</span><span class="dot">●</span><span>332 Bay St Brighton</span><span class="dot">●</span><span>Original Art</span><span class="dot">●</span><span>Limited Edition Prints</span><span class="dot">●</span><span>Picture Framing</span><span class="dot">●</span><span>332 Bay St Brighton</span><span class="dot">●</span><span>Original Art</span><span class="dot">●</span><span>Limited Edition Prints</span><span class="dot">●</span><span>Picture Framing</span><span class="dot">●</span><span>332 Bay St Brighton</span><span class="dot">●</span></div>
+<hr class="rule">
 <section><div class="wrap">
-  <div class="sec-head"><h2 class="disp">Selected works</h2><span class="label">From the opening exhibition</span></div>
-  <div class="grid g4"><div class="card"><div class="im"><img src="w_bigblue.jpg" alt=""></div><h3 style="font-size:20px">Untitled (Ultramarine)</h3><div class="meta">Mixed media on canvas · Enquire for details</div></div><div class="card"><div class="im"><img src="w_teal.jpg" alt=""></div><h3 style="font-size:20px">Reef Study</h3><div class="meta">Textured acrylic · Enquire for details</div></div><div class="card"><div class="im"><img src="w_bluegold.jpg" alt=""></div><h3 style="font-size:20px">Gold Over Blue</h3><div class="meta">Mixed media · Enquire for details</div></div><div class="card"><div class="im"><img src="w_seascape.jpg" alt=""></div><h3 style="font-size:20px">Southerly</h3><div class="meta">Acrylic on canvas · Enquire for details</div></div></div>
+  <div class="sec-head"><h2 class="serif">Selected <i>works</i></h2><span class="label">From the opening exhibition</span></div>
+  <div class="grid g4"><div class="card"><div class="im"><img src="w_bigblue.jpg" alt=""></div><h3 style="font-size:20px">Untitled (Ultramarine)</h3><div class="meta">Mixed media on canvas</div></div><div class="card"><div class="im"><img src="w_teal.jpg" alt=""></div><h3 style="font-size:20px">Reef Study</h3><div class="meta">Textured acrylic</div></div><div class="card"><div class="im"><img src="w_bluegold.jpg" alt=""></div><h3 style="font-size:20px">Gold Over Blue</h3><div class="meta">Mixed media</div></div><div class="card"><div class="im"><img src="w_seascape.jpg" alt=""></div><h3 style="font-size:20px">Southerly</h3><div class="meta">Acrylic on canvas</div></div></div>
 </div></section>
 
 <footer><div class="wrap">
   <div class="cols">
     <div><img class="fl" src="logo_white.png" alt="Mahoneys Galleries">
       <p style="max-width:300px">Fine art, limited edition art prints &amp; picture framing in the heart of Brighton.</p></div>
-    <div><h4>Visit</h4><p>332 Bay Street<br>Brighton VIC 3186</p><p style="margin-top:12px">Tue – Sun<br>10am – 5pm</p></div>
+    <div><h4>Visit</h4><p>332 Bay Street<br>Brighton VIC 3186</p><p style="margin-top:14px">Tuesday – Sunday<br>10am – 5pm</p></div>
     <div><h4>Explore</h4><a href="artists.html">Artists</a><a href="press-events.html">Press &amp; Events</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
-    <div><h4>Stay in the loop</h4><p>New works, openings and framing offers — once a month, no noise.</p>
+    <div><h4>Stay in the loop</h4><p>New works, openings and framing offers. Once a month — no noise.</p>
       <div class="news"><input placeholder="Email address"><button>Join</button></div>
-      <p style="margin-top:16px"><a href="https://www.instagram.com/mahoneysgalleries/" style="display:inline">Instagram @mahoneysgalleries</a></p></div>
+      <p style="margin-top:20px"><a href="https://www.instagram.com/mahoneysgalleries/" style="display:inline">Instagram — @mahoneysgalleries</a></p></div>
   </div>
-  <div class="base"><span>© 2026 Mahoneys Galleries · mahoneysgalleries.com.au</span><span>Fine Art · Prints · Framing</span></div>
+  <div class="base"><span>© 2026 Mahoneys Galleries · hello@mahoneysgalleries.com.au</span><span>Fine Art · Prints · Framing</span></div>
 </div></footer>
 <div class="ack">Mahoneys Galleries acknowledges the Bunurong people of the Kulin Nation, Traditional Owners of the land on which the gallery stands.</div>
 </body></html>
